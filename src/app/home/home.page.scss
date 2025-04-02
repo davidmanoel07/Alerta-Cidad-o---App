@@ -1,27 +1,84 @@
-#container {
+/* Define o fundo da tela */
+.home-content {
+  --background: #22333B; /* Define o fundo verde escuro */
+}
+
+
+/* Estrutura do layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+  padding: 20px;
+}
+
+/* Estilização da Logo */
+.logo {
+  margin-bottom: 20px;  /* Mantém a logo mais baixa */
+}
+
+.logo-image {
+   /* Ajuste conforme necessário */
+  height: auto;
+}
+
+
+/* Estilo do Título */
+.Titulo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;/* Aproxima mais ainda do logo */
+}
+
+/* Estilo do Subtítulo */
+.subTitulo {
+  font-size: 15px;
+  color: #fff;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
 
-#container p {
+/* Estilo da mensagem de boas-vindas */
+.Mensagem-boas-vindas {
   font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+  color: #fff;
+  margin-top: 40%;
+  margin-bottom: 20px;/* Aproxima a mensagem dos botões */
 }
 
-#container a {
-  text-decoration: none;
+/* Container dos botões */
+.buttons-container {
+  width: 275px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Espaçamento entre os botões */
+}
+
+/* Botões */
+
+ion-button {
+  width: 100%;
+  font-size: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+ion-button:active {
+  transform: scale(0.95);
+
+}
+
+/* Botão de cadastro */
+ion-button[color="primary"] {
+  --background: #007bff;
+  --color: #fff;
+}
+
+/* Botão de anonimato */
+ion-button[color="medium"] {
+  --color: #fff;
+  --border-width: 2px; /* Borda mais visível */
 }
