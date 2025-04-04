@@ -1,0 +1,48 @@
+ion-header {
+    --background: var(--ion-color-secondary);
+    --color: white;
+    text-align: center;
+}
+
+ion-content {
+    --padding-start: 20px; // Define o preenchimento (espaço interno) no lado esquerdo do conteúdo.
+    --padding-end: 20px;   // Define o preenchimento (espaço interno) no lado direito do conteúdo.
+    display: flex;        // Ativa o modelo de layout Flexbox para os elementos filhos diretos.
+    flex-direction: column; // Organiza os elementos filhos em uma coluna (um abaixo do outro).
+    min-height: 100%;      // Garante que o conteúdo ocupe pelo menos a altura total da tela.
+  }
+  
+  ion-content::part(scroll) { /* Estiliza a parte específica do shadow DOM do ion-content responsável pela área de rolagem. */
+    display: flex;        // Ativa o modelo de layout Flexbox para os elementos dentro da área de rolagem.
+    flex-direction: column; // Organiza os elementos filhos dentro da área de rolagem em uma coluna.
+    justify-content: center; // Centraliza os elementos filhos verticalmente dentro da área de rolagem.
+    align-items: center;    // Centraliza os elementos filhos horizontalmente dentro da área de rolagem.
+  }
+
+  #block-img-icon {
+    margin-bottom: 20px;
+}
+
+#block-img-icon img {
+    width: 120px;
+    height: auto;
+}
+  
+  form {
+    width: 100%;         // Faz com que o formulário ocupe toda a largura disponível do seu container pai.
+    max-width: 320px;     // Define uma largura máxima para o formulário, evitando que ele fique muito largo em telas grandes.
+    /* Outros estilos do formulário podem ser adicionados aqui. */
+  }
+  
+  ion-item {
+    margin-bottom: 20px; // Adiciona uma margem (espaço externo) na parte inferior de cada item do formulário (rótulo + input).
+  }
+  
+  ion-input {
+    text-align: center; // Centraliza o texto digitado dentro do campo de entrada.
+    padding: 12px;       // Define o preenchimento (espaço interno) dentro do campo de entrada.
+  }
+  
+  ion-button {
+    margin-top: 30px; // Adiciona uma margem (espaço externo) na parte superior do botão.
+  }

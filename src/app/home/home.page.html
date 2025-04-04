@@ -17,9 +17,9 @@
 
     <!-- Botões -->
     <div class="buttons-container">
-      <ion-button expand="block" color="primary">Entrar</ion-button>
-      <ion-button expand="block" color="primary">Me Cadastrar</ion-button>
-      <ion-button expand="block" color="medium">Ficar Anônimo</ion-button>
+      <ion-button (click)="goToLogin()" color="primary">Entrar</ion-button>
+      <ion-button (click)="goToRegister()" color="secondary">Me Cadastrar</ion-button>
+      <ion-button (click)="goToAnonymous()" color="medium" >Ficar Anônimo</ion-button>
     </div>
   </div>
 </ion-content>

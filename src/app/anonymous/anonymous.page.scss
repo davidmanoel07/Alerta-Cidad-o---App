@@ -1,0 +1,72 @@
+:root {
+    --ion-color-primary: #0163aa;
+    --ion-color-secondary: #22333B;
+}
+
+/* Header */
+ion-header {
+    --background: var(--ion-color-secondary);
+    --color: white;
+    text-align: center;
+}
+
+/* Main Content */
+#container-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Garante altura mínima sem overflow */
+    padding: 16px;
+}
+
+/* Logo */
+#block-img-icon {
+    margin-bottom: 20px;
+}
+
+#block-img-icon img {
+    width: 120px;
+    height: auto;
+}
+
+/* Formulário */
+#block-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    padding: 20px;
+    background-color: var(--ion-color-secondary);
+    border-radius: 10px;
+}
+
+#block-form p {
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Estilizando os Inputs do Ionic */
+ion-item {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+ion-label {
+    font-weight: bold;
+    color: var(--ion-color-primary);
+}
+
+ion-input {
+    padding: 10px;
+}
+
+/* Botão */
+ion-button {
+    width: 100%;
+    --background: var(--ion-color-primary);
+    --color: white;
+    margin-top: 10px;
+}
