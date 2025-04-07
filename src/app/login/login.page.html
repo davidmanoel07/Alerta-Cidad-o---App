@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Alerta Cidadão - Login</ion-title>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,19 +9,22 @@
   <div id="block-img-icon">
     <img src="assets/Logo do App.png" alt="Logo do App">
   </div>
+  
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
     <ion-item>
-      <ion-label position="floating">Email</ion-label>
+      <ion-label position="floating">Email:</ion-label>
       <ion-input type="email" formControlName="email" required></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Senha</ion-label>
+      <ion-label position="floating">Senha:</ion-label>
       <ion-input type="password" formControlName="password" required></ion-input>
     </ion-item>
 
     <ion-button expand="full" type="submit" [disabled]="loginForm.invalid">Entrar</ion-button>
+
+    <ion-button expand="full" color="secondary" id="forgot" (click)="goToForgotPassword()">Esqueci minha senha</ion-button>
 
   </form>
 </ion-content>

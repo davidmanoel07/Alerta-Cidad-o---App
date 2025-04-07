@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router'; // Importe o Router
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ import { IonicModule } from '@ionic/angular';
 export class LoginPage {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) { // Injete o Router
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
@@ -27,5 +28,9 @@ export class LoginPage {
     } else {
       console.log('❌ Formulário inválido');
     }
+  }
+
+  goToForgotPassword() {
+    this.router.navigate(['/forgot-password']);
   }
 }

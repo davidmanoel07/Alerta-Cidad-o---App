@@ -1,0 +1,22 @@
+.success-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+  }
+  
+  ion-icon {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+    color: var(--ion-color-success);
+  }
+  
+  p {
+    margin-bottom: 30px;
+    color: var(--ion-text-color);
+  }
