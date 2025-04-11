@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Redefinição de Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="reset-password-container">
+    <h2>Redefinir Número</h2>
+    <p>Digite seu e-mail cadastrado e seu novo Número mais o DDD.</p>
+
+    <!-- Email -->
+    <ion-item lines="full">
+      <ion-label position="floating">Email:</ion-label>
+      <ion-input [(ngModel)]="email" type="email" required></ion-input>
+    </ion-item>
+
+    <!-- Nova Senha -->
+    <ion-item lines="full">
+      <ion-label position="floating">Novo Número:</ion-label>
+      <ion-input [(ngModel)]="newNumber" type="text" required></ion-input>
+    </ion-item>
+
+    <!-- Confirmar Senha -->
+    <ion-item lines="full">
+      <ion-label position="floating">Confirmar Novo Número:</ion-label>
+      <ion-input [(ngModel)]="confirmNumber" type="text" required></ion-input>
+    </ion-item>
+
+    <!-- Botão -->
+    <ion-button expand="block" (click)="resetNumber()">Confirmar</ion-button>
+  </div>
+</ion-content>

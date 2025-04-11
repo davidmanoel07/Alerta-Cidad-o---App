@@ -3,6 +3,9 @@
     --ion-color-secondary: #22333B;
 }
 
+ion-content{
+    --background: #22333B;
+}
 /* Header */
 ion-header {
     --background: var(--ion-color-secondary);
@@ -40,6 +43,7 @@ ion-header {
     padding: 20px;
     background-color: var(--ion-color-secondary);
     border-radius: 10px;
+    margin-bottom: 50%;
 }
 
 #block-form p {
@@ -50,6 +54,8 @@ ion-header {
 
 /* Estilizando os Inputs do Ionic */
 ion-item {
+    color: #fff;
+  --background: #1e1e1e;
     width: 100%;
     margin-bottom: 10px;
 }
@@ -57,16 +63,23 @@ ion-item {
 ion-label {
     font-weight: bold;
     color: var(--ion-color-primary);
+   
 }
 
 ion-input {
     padding: 10px;
 }
 
+
 /* Botão */
 ion-button {
     width: 100%;
     --background: var(--ion-color-primary);
     --color: white;
-    margin-top: 10px;
+    margin-top: 20px;
 }
+
+ion-toolbar {
+    background-color: #000 !important;
+    color: white !important;
+  }

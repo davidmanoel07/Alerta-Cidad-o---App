@@ -1,8 +1,9 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>Modo Anônimo</ion-title>
   </ion-toolbar>
 </ion-header>
+
 
 <ion-content class="ion-padding">
   <div id="container-main">
@@ -11,22 +12,24 @@
     </div>
 
     <div id="block-form">
-      <p id="desc-anonymous">Alerta cidadão em modo Anônimo.</p>
+      <p id="desc-anonymous">Não coletamos dados pessoais. Sua denúncia será 100% anônima.</p>
 
-      <!-- Campo de E-mail -->
-      <ion-item>
-        <ion-label position="floating">E-mail</ion-label>
-        <ion-input type="email" id="e-mail"></ion-input>
-      </ion-item>
+      
+      <!-- Campo Motivo -->
+     <ion-item>
+       <ion-label position="floating">Motivo da Denúncia:</ion-label>
+       <ion-input type="text" [(ngModel)]="motivo"></ion-input>
+     </ion-item>
 
-      <!-- Campo de Motivo da denúncia -->
-      <ion-item>
-        <ion-label position="floating">Motivo da denúncia</ion-label>
-        <ion-input type="text" id="report-type"></ion-input>
-      </ion-item>
+     <!-- Campo Local -->
+     <ion-item>
+       <ion-label position="floating">Telefone + DDD:</ion-label>
+       <ion-input type="tel" [(ngModel)]="telefone"></ion-input>
+     </ion-item>
 
-      <!-- Botão de Conclusão -->
-      <ion-button expand="full">Concluir</ion-button>
+      
+      <!-- Botão -->
+     <ion-button expand="full" (click)="concluirDenuncia()">Concluir</ion-button>
     </div>
   </div>
 </ion-content>

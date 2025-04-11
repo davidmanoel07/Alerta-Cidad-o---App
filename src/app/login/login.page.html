@@ -1,30 +1,28 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-
   <div id="block-img-icon">
     <img src="assets/Logo do App.png" alt="Logo do App">
   </div>
-  
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <ion-item>
       <ion-label position="floating">Email:</ion-label>
       <ion-input type="email" formControlName="email" required></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Senha:</ion-label>
-      <ion-input type="password" formControlName="password" required></ion-input>
+      <ion-label position="floating">Telefone + DDD</ion-label>
+      <ion-input type="tel" formControlName="telefone" required></ion-input> <!-- corrigido -->
     </ion-item>
 
     <ion-button expand="full" type="submit" [disabled]="loginForm.invalid">Entrar</ion-button>
 
-    <ion-button expand="full" color="secondary" id="forgot" (click)="goToForgotPassword()">Esqueci minha senha</ion-button>
-
+    <ion-button fill="clear" expand="block" (click)="goToResetNumber()">Esqueci meu Telefone</ion-button>
   </form>
 </ion-content>
+

@@ -12,9 +12,15 @@
     text-align: center;
   }
   
+  ion-toolbar {
+    background-color: #000 !important;
+    color: white !important;
+  }
+
   /* Conteúdo Principal */
   ion-content {
-    --background: var(--ion-color-light); /* Define a cor de fundo do conteúdo */
+
+    --background: #22333B;
     --color: var(--ion-text-color); /* Define a cor do texto padrão do conteúdo */
     padding: 20px; /* Adiciona um pouco mais de espaçamento interno */
     display: flex;
@@ -24,6 +30,7 @@
   
   /* Formulário */
   form {
+    margin-top: 40%;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -36,6 +43,8 @@
   
   /* Estilizando os Inputs do Ionic */
   ion-item {
+    color: #fff;
+    --background: #1e1e1e;
     width: 100%;
     margin-bottom: 15px; /* Aumentei um pouco a margem inferior */
     border: 1px solid #ddd; /* Adiciona uma borda sutil aos inputs */
@@ -43,6 +52,7 @@
   }
   
   ion-label {
+    
     font-weight: bold;
     color: var(--ion-color-primary);
   }

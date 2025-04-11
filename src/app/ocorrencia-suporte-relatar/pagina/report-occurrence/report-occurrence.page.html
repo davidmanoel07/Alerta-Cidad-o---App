@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>Relatar ocorrências</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="type-occurrence">
+
+    <ion-item>
+      <ion-label>Ocorrência</ion-label>
+      <ion-select placeholder="Selecione">
+        <ion-select-option value="roubo">Roubo</ion-select-option>
+        <ion-select-option value="furto">Furto</ion-select-option>
+        <ion-select-option value="acidente">Acidente</ion-select-option>
+        <ion-select-option value="vandalismo">Vandalismo</ion-select-option>
+        <ion-select-option value="agressao">Agressão</ion-select-option>
+        <ion-select-option value="pudor">Atentado ao pudor</ion-select-option>
+        <ion-select-option value="outro">Outro</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button>Enviar</ion-button>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="dark">
+    <div style="width: 100%; display: flex; justify-content: center; align-items: center; ">
+      <ion-button style="text-transform: lowercase;" (click)="goToOccurrences()" target="_blank" id="button-user" color="secondary">voltar</ion-button>
+      </div>
+  </ion-toolbar>
+</ion-footer>

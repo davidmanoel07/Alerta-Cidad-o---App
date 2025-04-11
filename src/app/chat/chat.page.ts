@@ -1,20 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-chat',
+  selector: 'app-chat', // ✅ Correção do seletor
   templateUrl: './chat.page.html',
   styleUrls: ['./chat.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonicModule, CommonModule, FormsModule],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class ChatPage implements OnInit {
+export class ChatPage { // ✅ Correção do nome da classe
+  // Aqui você implementará a lógica específica do chat
+  constructor(private router: Router) {}
 
-  constructor() { }
-
+  // Exemplo de como você pode acessar o motivo passado via queryParams
   ngOnInit() {
+    this.router.url.includes('?motivo=') ? console.log("Motivo da denúncia:", this.router.parseUrl(this.router.url).queryParams['motivo']) : null
   }
-
 }

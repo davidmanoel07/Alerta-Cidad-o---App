@@ -1,0 +1,121 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>Suporte ao usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card color="light" class="cards-suport">
+    <ion-card-header>
+      <ion-accordion-group>
+
+        <ion-accordion value="first">
+
+          <ion-item slot="header" color="light">
+          <ion-label class="title-suport">Preciso criar uma conta para denunciar?</ion-label>
+          </ion-item>
+            <div class="info-suport" slot="content">Não! Você pode escolher entre modo anônimo, que só pede telefone e motivo da denúncia, ou modo registrado, onde você informa nome, telefone e e-mail.</div>
+
+        </ion-accordion>
+
+        <ion-accordion value="second">
+
+          <ion-item slot="header" color="light">
+          <ion-label class="title-suport">Modo Registrado</ion-label>
+          </ion-item>
+            <div class="info-suport" slot="content">Caso prefira se identificar, informe: Nome completo, Telefone e E-mail. Após o envio, você terá acesso a recursos adicionais e poderá acompanhar a ocorrência com mais detalhes</div>
+
+        </ion-accordion>
+
+        <ion-accordion value="third">
+
+          <ion-item slot="header" color="light">
+          <ion-label class="title-suport"> Minhas informações estão seguras?</ion-label>
+          </ion-item>
+            <div class="info-suport" slot="content">Sim. Suas informações são tratadas com total sigilo e armazenadas de forma segura. No modo anônimo, nenhuma informação pessoal além do número de telefone é requisitada.</div>
+
+        </ion-accordion>
+
+        <ion-accordion value="fourth">
+
+          <ion-item slot="header" color="light">
+          <ion-label class="title-suport"> Para que servem as outras opções da tela de ocorrência?</ion-label>
+          </ion-item>
+            <div class="info-suport" slot="content"><strong>Relatar uma ocorrência:</strong> Para registrar um problema, situação de risco, violência, furto ou qualquer situação irregular.<strong> Áreas de Perigo:</strong> Veja no mapa as regiões com maior índice de ocorrências registradas por outros usuários. <strong>Chat com a Polícia:</strong> Comunicação direta com agentes em tempo real. Disponível apenas para modo anônimo, após o preenchimento básico.
+            </div>
+
+        </ion-accordion>
+
+        <ion-accordion value="fifth">
+
+          <ion-item slot="header" color="light">
+          <ion-label class="title-suport">Modo Anônimo</ion-label>
+          </ion-item>
+            <div class="info-suport" slot="content">Ideal para quem prefere não se identificar.
+              Basta informar seu telefone e o motivo da denúncia. Após isso, você será direcionado diretamente a um chat ao vivo com um policial atendente.</div>
+
+        </ion-accordion>
+
+        <ion-accordion value="Sixth">
+
+          <ion-item slot="header" color="light">
+          <ion-label class="title-suport">Posso fazer uma denúncia a qualquer hora?</ion-label>
+          </ion-item>
+            <div class="info-suport" slot="content">Sim! O sistema funciona 24 horas por dia, 7 dias por semana. Sempre terá um policial atendente disponível no modo anônimo.</div>
+
+        </ion-accordion>
+
+        <ion-accordion value="seventh">
+
+          <ion-item slot="header" color="light">
+          <ion-label class="title-suport">Como saberei se minha denúncia foi recebida?</ion-label>
+          </ion-item>
+            <div class="info-suport" slot="content"><strong>Modo registrado:</strong> Você verá o status da denúncia na sua área de acompanhamento. <strong>Modo anônimo:</strong> Você será atendido direto no chat, confirmando o recebimento.</div>
+
+        </ion-accordion>
+
+        <ion-accordion value="eighth">
+
+          <ion-item slot="header" color="light">
+          <ion-label class="title-suport">Consigo acompanhar a denúncia depois?</ion-label>
+          </ion-item>
+            <div class="info-suport" slot="content">Apenas se você usou o <strong>modo registrado</strong>, poderá acompanhar e receber atualizações. <strong>No modo anônimo</strong>, isso não é possível, pois não há dados pessoais vinculados.</div>
+
+        </ion-accordion>
+
+        <!-- <ion-accordion value="ninth">
+
+          <ion-item slot="header" color="light">
+          <ion-label class="title-suport">Ninth Accordion</ion-label>
+          </ion-item>
+            <div class="info-suport" slot="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem corporis magnam a laboriosam maxime ipsam! Labore excepturi quasi laboriosam modi odio error aperiam at magni, dolore numquam quo, libero vero.</div>
+
+        </ion-accordion>
+
+        <ion-accordion value="tenth">
+
+          <ion-item slot="header" color="light">
+          <ion-label class="title-suport">Tenth Accordion</ion-label>
+          </ion-item>
+            <div class="info-suport" slot="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem corporis magnam a laboriosam maxime ipsam! Labore excepturi quasi laboriosam modi odio error aperiam at magni, dolore numquam quo, libero vero.</div>
+
+        </ion-accordion> -->
+
+      </ion-accordion-group>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+      <ion-button (click)="goToOccurrences()" target="_blank" id="button-user" color="black"  style="text-transform: lowercase;">Voltar</ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>
+
+
+

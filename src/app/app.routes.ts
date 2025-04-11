@@ -16,26 +16,44 @@ export const routes: Routes = [
   },
   {
     path: 'register',
-    loadComponent: () => import('./register/register.page').then( m => m.RegisterPage)
+    loadComponent: () => import('./register/register.page').then(m => m.RegisterPage),
   },
   {
     path: 'login',
-    loadComponent: () => import('./login/login.page').then( m => m.LoginPage)
-  },  {
+    loadComponent: () => import('./login/login.page').then(m => m.LoginPage),
+  },
+  {
     path: 'chat',
-    loadComponent: () => import('./chat/chat.page').then( m => m.ChatPage)
+    loadComponent: () => import('./chat/chat.page').then(m => m.ChatPage),
   },
   {
     path: 'register-success',
-    loadComponent: () => import('./register-success/register-success.page').then( m => m.RegisterSuccessPage)
+    loadComponent: () => import('./register-success/register-success.page').then(m => m.RegisterSuccessPage),
+  },
+ 
+  {
+    path: 'reset-number',
+    loadComponent: () => import('./reset-number/reset-number.page').then(m => m.ResetNumberPage),
+  },
+
+
+  {
+    path: 'occurrences',
+    loadComponent: () =>
+      import('./ocorrencia-suporte-relatar/occurrences/occurrences.page').then(
+        m => m.OccurrencesPage
+      ),
+  },
+  
+  {
+    path: 'suport',
+    loadComponent: () => import('./ocorrencia-suporte-relatar/pagina/suport/suport.page').then(m => m.SuportPage),
   },
   {
-    path: 'forgot-password',
-    loadComponent: () => import('./forgot-password/forgot-password.page').then( m => m.ForgotPasswordPage)
-  },
-
+    path: 'report-occurrence',
+    loadComponent: () => import('./ocorrencia-suporte-relatar/pagina/report-occurrence/report-occurrence.page').then(m => m.ReportOccurrencePage),
+  }
   
-
+  
 ];
-
 

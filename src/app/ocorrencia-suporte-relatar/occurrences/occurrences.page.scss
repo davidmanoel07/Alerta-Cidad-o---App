@@ -1,0 +1,61 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+ion-content{
+  --background: #22333B;
+}
+// ELEMENTOS DO HEADER
+
+.titles-all {
+  text-align: center;
+}
+
+#title-card {
+  padding-top: 10px;
+}
+
+.logo-image {
+  width: 150px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// ELEMENTOS DO CONTENT
+
+.item-options {
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#subtitle-card {
+  padding-top: 80px;
+}
+
+.item-desc {
+  text-indent: 10px;
+  font-size: 0.9em;
+}
+
+ion-list, ion-card {
+  background-color: #22333B;
+}
+
+
+// ELEMENTOS DO FOOTER
+
+#button-user{
+  text-transform: lowercase;
+  color: white;
+  border: none;
+  border-width: 0;
+}
+
+
+
+
+

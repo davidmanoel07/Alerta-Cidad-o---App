@@ -1,0 +1,41 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+// ELEMENTOS DO HEADER
+
+ion-header ion-toolbar ion-title {
+    text-align: center;
+}
+
+// ELEMENTOS DO CONTENT
+
+.info-suport {
+    background-color: white;
+    padding: 15px;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.title-suport {
+
+    font-size: 1.4em;
+}
+
+ion-card { // tirei o radius do ion-card ficar reto, senao ia ficar com algumas brechas
+    border-radius: 0px;
+}
+
+.title-container {
+    text-indent: 10px;
+    display: flex;
+    align-items: center;
+}
+
+ion-button{
+    width:150px;  
+}
+
+// ELEMENTOS DO FOOTER

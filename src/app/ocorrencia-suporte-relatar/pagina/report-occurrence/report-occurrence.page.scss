@@ -1,0 +1,52 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+ion-content{
+    --background: #22333B;
+}
+
+// HEADER
+
+ion-header ion-title {
+    text-align: center;
+    color: #fff;
+}
+
+// CONTENT / BODY
+
+.type-occurrence {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.type-occurrence ion-button {
+    margin-left: 10px;
+    width: 100px;
+    height: 45px;
+}
+
+.type-occurrence ion-select {
+   width: 120px;
+}
+
+ion-item{
+    font-size:12px;
+    color: #000;
+}
+
+// FOOTER 
+
+ion-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ion-button{
+    width: 150px;
+
+}
