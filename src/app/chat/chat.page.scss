@@ -1,0 +1,77 @@
+ion-header {
+  text-align: center;
+}
+
+.chat-container {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+.chat-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+  
+.mensagem {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  max-width: 75%;
+  word-wrap: break-word;
+  position: relative;
+}
+  
+.usuario {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: white;
+}
+  
+.policia {
+  align-self: flex-start;
+  background-color: #e5e5ea;
+  color: black;
+}
+
+.timestamp {
+  font-size: 0.7rem;
+  color: gray;
+  margin-top: 4px;
+  text-align: right;
+}
+  
+.input-container {
+  padding: 0.75rem;
+  border-top: 1px solid #ccc;
+  background: #fff;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+}
+  
+.mensagem-input {
+  width: 100%;
+}
+
+ion-content.has-footer {
+  --padding-bottom: 80px;
+}
+
+ion-input {
+  margin-top: 20px;
+  color: #000;
+  height: 70px;
+}
+  
+ion-button {
+  margin-top: 30px;
+  height: 35px;
+  width: 120px;
+}
+

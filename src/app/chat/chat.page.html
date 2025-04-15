@@ -1,16 +1,29 @@
-
-///  Criar o Chat Para Falar com a Policia
-
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>chat</ion-title>
+  <ion-toolbar color="dark">
+    <ion-title>Chat com a Polícia</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">chat</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content fullscreen>
+  <div class="chat-wrapper">
+    <div class="chat-container" #chatContainer>
+      <div *ngFor="let msg of mensagens" class="mensagem" [ngClass]="msg.tipo">
+        {{ msg.texto }}
+        <div class="timestamp">{{ msg.timestamp | date: 'shortTime' }}</div>
+      </div>
+    </div>
+
+    <ion-footer class="chat-footer">
+      <ion-item>
+        <ion-input
+          [(ngModel)]="mensagemTexto"
+          placeholder="Digite sua mensagem"
+          (keyup.enter)="enviarMensagem()">
+        </ion-input>
+        <ion-button (click)="enviarMensagem()" fill="solid">Enviar</ion-button>
+      </ion-item>
+    </ion-footer>
+  </div>
 </ion-content>
+
+
