@@ -7,20 +7,23 @@
 <ion-content class="ion-padding">
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     
+
+    <!-- Campo de Nome-->
     <ion-item>
       <ion-label position="floating">Nome Completo:</ion-label>
       <ion-input type="text" formControlName="name" id="name" required></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">Telefone (DDD + Número):</ion-label>
-      <ion-input type="tel" formControlName="phone" id="phone" required></ion-input>
-    </ion-item>
-
-    
+      <!-- Campo de Email-->
     <ion-item>
       <ion-label position="floating">Email:</ion-label>
       <ion-input type="email" formControlName="email" id="email" required></ion-input>
+    </ion-item>
+
+      <!-- Campo de Telefone-->
+    <ion-item>
+      <ion-label position="floating">Telefone:</ion-label>
+      <ion-input type="tel" formControlName="phone" id="phone" required></ion-input>
     </ion-item>
 
   

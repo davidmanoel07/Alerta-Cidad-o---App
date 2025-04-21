@@ -4,30 +4,38 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <div class="type-occurrence">
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="wrapper">
+    <div class="occurrence-container">
+      <ion-label class="occurrence-label">Motivo da Ocorrência</ion-label>
 
-    <ion-item>
-      <ion-label>Ocorrência</ion-label>
-      <ion-select placeholder="Selecione">
-        <ion-select-option value="roubo">Roubo</ion-select-option>
-        <ion-select-option value="furto">Furto</ion-select-option>
-        <ion-select-option value="acidente">Acidente</ion-select-option>
-        <ion-select-option value="vandalismo">Vandalismo</ion-select-option>
-        <ion-select-option value="agressao">Agressão</ion-select-option>
-        <ion-select-option value="pudor">Atentado ao pudor</ion-select-option>
-        <ion-select-option value="outro">Outro</ion-select-option>
-      </ion-select>
-    </ion-item>
+      <ion-item>
+        <ion-select placeholder="Selecione" [(ngModel)]="motivoOcorrencia">
+          <ion-select-option value="roubo">Roubo.</ion-select-option>
+          <ion-select-option value="furto">Furto.</ion-select-option>
+          <ion-select-option value="acidente">Acidente.</ion-select-option>
+          <ion-select-option value="vandalismo">Vandalismo.</ion-select-option>
+          <ion-select-option value="agressao">Agressão.</ion-select-option>
+          <ion-select-option value="pudor">Atentado ao pudor.</ion-select-option>
+          <ion-select-option value="outro">Outro Motivo.</ion-select-option>
+        </ion-select>
+      </ion-item>
 
-    <ion-button>Enviar</ion-button>
+      <ion-label class="nao-encontrou-label">Não achou o motivo? Digite abaixo:</ion-label>
+      <ion-item>
+        <ion-input placeholder="Digite sua Ocorrência:" [(ngModel)]="outraOcorrencia"></ion-input>
+      </ion-item>
+
+      <ion-button color="primary" expand="full" (click)="enviarOcorrencia()" [disabled]="!motivoOcorrencia && !outraOcorrencia">Enviar</ion-button>
+    </div>
   </div>
 </ion-content>
 
+
 <ion-footer>
   <ion-toolbar color="dark">
-    <div style="width: 100%; display: flex; justify-content: center; align-items: center; ">
-      <ion-button style="text-transform: lowercase;" (click)="goToOccurrences()" target="_blank" id="button-user" color="secondary">voltar</ion-button>
-      </div>
+    <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+      <ion-button class="voltar" style="text-transform: lowercase;" (click)="goToOccurrences()" color="secondary">voltar</ion-button>
+    </div>
   </ion-toolbar>
 </ion-footer>

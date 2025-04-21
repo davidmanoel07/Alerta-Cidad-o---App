@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, AlertController } from '@ionic/angular'; // Importe AlertController
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -15,36 +15,45 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class LoginPage {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router) {
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private alertController: AlertController // Injete AlertController
+  ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       telefone: ['', Validators.required],
     });
   }
 
+  async presentAlert(header: string, message: string) {
+    const alert = await this.alertController.create({
+      header: header,
+      message: message,
+      buttons: ['OK']
+    });
+    await alert.present();
+  }
+
   onSubmit() {
     if (this.loginForm.valid) {
       const { email, telefone } = this.loginForm.value;
 
-      // Busca os usuários salvos
+      // Busca os usuários salvos (exemplo)
       const usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
 
-      // Verifica se existe algum com o mesmo email e telefone
-      const usuarioEncontrado = usuarios.find((u: any) => 
+      // Verifica se existe algum com o mesmo email e telefone (exemplo)
+      const usuarioEncontrado = usuarios.find((u: any) =>
         u.email === email && u.phone === telefone
       );
 
       if (usuarioEncontrado) {
         console.log('✅ Login bem-sucedido:', usuarioEncontrado);
-
-        // 👉 Salva no localStorage
-       localStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado));
-
+        localStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado));
         this.router.navigate(['/occurrences']);
-        
       } else {
         console.log('❌ Usuário não encontrado');
-        alert('Usuário não encontrado. Verifique se as informações estão corretas!');
+        this.presentAlert('Erro', 'Usuário não encontrado. Verifique as informações!'); // Use o alerta do Ionic
       }
     } else {
       console.log('❌ Formulário inválido');
@@ -54,5 +63,8 @@ export class LoginPage {
   goToResetNumber() {
     this.router.navigate(['/reset-number']);
   }
-}
 
+  goToLostEmail() {
+    this.router.navigate(['/lost-email']);
+  }
+}

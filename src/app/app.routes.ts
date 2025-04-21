@@ -27,10 +27,14 @@ export const routes: Routes = [
     loadComponent: () => import('./chat/chat.page').then(m => m.ChatPage),
   },
   {
+    path: 'chat-anonymous', // **Adicione esta rota**
+    loadComponent: () => import('./chat-anonymous/chat-anonymous.page').then(m => m.ChatAnonymousPage),
+  },
+  {
     path: 'register-success',
     loadComponent: () => import('./register-success/register-success.page').then(m => m.RegisterSuccessPage),
   },
- 
+
   {
     path: 'reset-number',
     loadComponent: () => import('./reset-number/reset-number.page').then(m => m.ResetNumberPage),
@@ -44,16 +48,27 @@ export const routes: Routes = [
         m => m.OccurrencesPage
       ),
   },
-  
+
   {
     path: 'suport',
     loadComponent: () => import('./ocorrencia-suporte-relatar/pagina/suport/suport.page').then(m => m.SuportPage),
   },
+  
   {
     path: 'report-occurrence',
     loadComponent: () => import('./ocorrencia-suporte-relatar/pagina/report-occurrence/report-occurrence.page').then(m => m.ReportOccurrencePage),
+  },
+
+  {
+    path: 'lost-email',
+    loadComponent: () => import('./lost-email/lost-email.page').then( m => m.LostEmailPage)
+  },
+  
+  {
+    path: 'tutorial',
+    loadComponent: () => import('./tutorial/tutorial.page').then(m => m.TutorialPage)
   }
   
-  
+
 ];
 

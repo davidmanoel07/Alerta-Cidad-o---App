@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title id="reasonReportTitle">Chat Anônimo com a Polícia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div class="chat-wrapper">
+    <div class="chat-container" #chatContainer>
+      <div *ngFor="let msg of mensagens" class="mensagem" [ngClass]="msg.tipo">
+        {{ msg.texto }}
+        <div class="timestamp">{{ msg.timestamp | date: 'shortTime' }}</div>
+      </div>
+    </div>
+
+    <ion-footer class="chat-footer">
+      <ion-item>
+        <ion-input
+          [(ngModel)]="mensagemTexto"
+          placeholder="Digite sua mensagem"
+          (keyup.enter)="enviarMensagem()">
+        </ion-input>
+        <ion-button (click)="enviarMensagem()" fill="solid">Enviar</ion-button>
+      </ion-item>
+    </ion-footer>
+  </div>
+</ion-content>
+
+

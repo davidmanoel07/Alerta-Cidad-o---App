@@ -1,0 +1,67 @@
+ion-content {
+  --background: #22333B;
+}
+
+ion-title {
+  text-align: center;
+  color: #fff;
+}
+
+h1 {
+  margin-top: 30%;
+  text-align: center;
+  font-size: 1.2rem; /* Ajustei o tamanho da fonte para rem */
+  color: #f0f0f0; /* Uma cor um pouco mais clara */
+  margin-bottom: 20px; /* Adicionei um pouco de espaço abaixo do título */
+}
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 16px; 
+  }
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Proporção 16:9 para responsividade */
+  margin-bottom: 30px; /* Aumentei um pouco o espaço abaixo do vídeo */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+ion-list {
+  background: transparent; /* Deixa o fundo da lista transparente para herdar o background do content */
+  margin-bottom: 20px; /* Adiciona um pouco de espaço entre as listas */
+}
+
+ion-list-header {
+  font-size: 1.1rem;
+  color: #fff;
+  padding-left: 16px; /* Alinha o texto com os itens da lista */
+  padding-bottom: 8px; /* Adiciona um pouco de espaço abaixo do cabeçalho */
+  border-bottom: 1px solid #444; /* Adiciona uma linha de separação sutil */
+  margin-bottom: 8px; /* Adiciona espaço entre o cabeçalho e o primeiro item */
+  --background: transparent; /* Deixa o fundo do cabeçalho transparente */
+}
+
+ion-item {
+  --background: #33444B; /* Um tom um pouco mais claro para os itens */
+  color: #ddd;
+  margin-bottom: 4px; /* Pequeno espaço entre os itens */
+  border-radius: 8px; /* Bordas arredondadas para um visual mais moderno */
+  --padding-start: 16px; /* Espaçamento interno à esquerda */
+  --inner-padding-end: 16px; /* Espaçamento interno à direita */
+}
+
+ion-item:last-child {
+  margin-bottom: 0; /* Remove a margem inferior do último item da lista */
+}
+

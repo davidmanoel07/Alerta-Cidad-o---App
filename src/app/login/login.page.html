@@ -10,19 +10,24 @@
   </div>
 
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    
     <ion-item>
       <ion-label position="floating">Email:</ion-label>
       <ion-input type="email" formControlName="email" required></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Telefone + DDD</ion-label>
+      <ion-label position="floating">Telefone:</ion-label>
       <ion-input type="tel" formControlName="telefone" required></ion-input> <!-- corrigido -->
     </ion-item>
 
     <ion-button expand="full" type="submit" [disabled]="loginForm.invalid">Entrar</ion-button>
 
-    <ion-button fill="clear" expand="block" (click)="goToResetNumber()">Esqueci meu Telefone</ion-button>
+    <ion-button fill="clear" expand="block" (click)="goToResetNumber()">Perdi acesso ao meu Telefone</ion-button>
+
+    <ion-button fill="clear" expand="block" (click)="goToLostEmail()">Perdi acesso ao meu Email</ion-button>
+
   </form>
 </ion-content>
 

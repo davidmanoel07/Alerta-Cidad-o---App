@@ -1,0 +1,46 @@
+<ion-header color="primary" [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Tutorial do Aplicativo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <h1>Assista ao seguinte vídeo, e aprenda os principais recursos do Aplicativo</h1>
+
+  <div class="video-container">
+
+           <!-- Adicionar o caminho do Video-->
+    <iframe src=" " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <h2>O Tutorial terá as seguintes instruções:</h2>
+
+  <ion-list>
+    <ion-list-header>
+      Primeiros Passos
+    </ion-list-header>
+    <ion-item>Aprenda a acessar sua conta.</ion-item>
+    <ion-item>Recupere seu acesso se perder o celular.</ion-item>
+    <ion-item>Crie sua conta rapidamente.</ion-item>
+    <ion-item>Navegue anonimamente pelo app.</ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      Utilizando o Aplicativo
+    </ion-list-header>
+    <ion-item>Saiba como informar uma ocorrência.</ion-item>
+    <ion-item>Descubra as áreas com maior risco.</ion-item>
+    <ion-item>Converse com a polícia em tempo real.</ion-item>
+    <ion-item>Use o botão de emergência em situações críticas.</ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="carregarMaisDados($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="circles"
+      loadingText="Carregando mais dados...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

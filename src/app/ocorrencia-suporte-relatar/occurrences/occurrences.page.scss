@@ -50,12 +50,22 @@ ion-list, ion-card {
 
 #button-user{
   text-transform: lowercase;
-  color: white;
   border: none;
   border-width: 0;
 }
 
+#emergency{
+  margin-top: 20%;
+  margin-left: 20%;
+  height: 70px;
+  --border-radius: 18px;
+  font-weight: bold;
+  
+}
 
-
+.status{
+  height: 50px;
+  width: 50px;
+}
 
 
