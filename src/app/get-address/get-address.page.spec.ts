@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { LostEmailPage } from './lost-email.page';
+import { GetAddressPage } from './get-address.page';
 
-describe('LostEmailPage', () => {
-  let component: LostEmailPage;
-  let fixture: ComponentFixture<LostEmailPage>;
+describe('GetAddressPage', () => {
+  let component: GetAddressPage;
+  let fixture: ComponentFixture<GetAddressPage>;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LostEmailPage);
+    fixture = TestBed.createComponent(GetAddressPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -2,6 +2,17 @@ ion-header {
   text-align: center;
 }
 
+ion-content {
+  --background: #121212; // Fundo preto
+  color: white;
+}
+
+.chat-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .chat-container {
   flex: 1;
   padding: 16px;
@@ -11,13 +22,6 @@ ion-header {
   scroll-behavior: smooth;
 }
 
-.chat-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-  
 .mensagem {
   padding: 10px;
   margin-bottom: 10px;
@@ -26,13 +30,13 @@ ion-header {
   word-wrap: break-word;
   position: relative;
 }
-  
+
 .usuario {
   align-self: flex-end;
   background-color: #007bff;
   color: white;
 }
-  
+
 .policia {
   align-self: flex-start;
   background-color: #e5e5ea;
@@ -45,35 +49,30 @@ ion-header {
   margin-top: 4px;
   text-align: right;
 }
-  
-.input-container {
-  padding: 0.75rem;
-  border-top: 1px solid #ccc;
-  background: #fff;
-  position: sticky;
-  bottom: 0;
-  z-index: 10;
-}
-  
-.mensagem-input {
-  width: 100%;
+
+ion-footer {
+  background-color: #1e1e1e;
 }
 
-ion-content.has-footer {
-  --padding-bottom: 80px;
+ion-item {
+  --background: #1e1e1e; // Fundo escuro do item
+  --color: white; // Texto branco
+  border-top: 1px solid #333; // Linha sutil no topo
 }
 
 ion-input {
- 
   margin-top: 20px;
-  color: #fff;
+  color: white;
+  background-color: transparent;
   height: 70px;
 }
-  
+
 ion-button {
   margin-top: 30px;
   height: 35px;
   width: 120px;
 }
 
-
+ion-content.has-footer {
+  --padding-bottom: 80px;
+}

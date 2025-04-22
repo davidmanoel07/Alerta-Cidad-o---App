@@ -1,0 +1,79 @@
+:root {
+    --ion-color-primary: #0163aa;
+    --ion-color-secondary: #22333B;
+    --ion-color-light: #f4f5f8;
+    --ion-text-color: #f4f5f8;
+    --toolbar-background: #000;
+  }
+  
+  ion-header {
+    --background: var(--ion-color-secondary);
+    --color: white;
+    text-align: center;
+  }
+  
+  ion-toolbar {
+    --background: var(--toolbar-background) !important;
+    --color: white !important;
+  }
+  
+  ion-content {
+    --background: #22333B;
+    --color: var(--ion-text-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+  }
+  
+  form {
+    background-color: #fff;
+    margin-top: 40%;
+    width: 100%;
+    max-width: 340px;
+    padding: 30px;
+    border-radius: 8px;
+  }
+  
+  ion-item {
+    --background: transparent;
+    color: #000; /* A cor do ícone/borda do item já está preta */
+    width: 100%;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--ion-color-light);
+    --padding-start: 0;
+    --padding-end: 0;
+    font-size: 15px;
+  }
+  
+  ion-label {
+
+    font-weight: bolder;
+    color: var(--ion-color-light);
+    margin-bottom: 5px;
+    display: block;
+    opacity: 0.8;
+  }
+  
+  ion-input {
+    margin-top: 12px;
+    padding: 10px; /* Aumentei um pouco o padding */
+    font-size: 1.1em;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.05); /* Fundo cinza bem claro */
+    border-radius: 4px; /* Adicionei um pequeno arredondamento */
+  }
+  
+  ion-button {
+    width: 100%;
+    --background: var(--ion-color-primary);
+    --color: white;
+    margin-top: 40px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 500;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 14px;
+  }

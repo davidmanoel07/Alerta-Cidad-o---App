@@ -35,7 +35,7 @@ export class ChatPage {
     }
 
     this.mensagens.push({
-      texto: 'Olá, em que posso ajudar?',
+      texto: 'Chat da Polícia. Olá, no que posso ajudar neste momento?',
       tipo: 'policia',
       timestamp: new Date()
     });
@@ -57,7 +57,7 @@ export class ChatPage {
     setTimeout(() => {
       this.mensagens.push({
 
-        texto: 'Sua ocorrência foi registrada com sucesso. Um agente entrará em contato em breve para prestar assistência.',
+        texto: 'Recebemos sua mensagem. Sua ocorrência foi registrada sob o protocolo [OCOR-JAB-210425-1234] e será analisada. Um agente entrará em contato para dar seguimento.',
 
         
         tipo: 'policia',

@@ -27,7 +27,6 @@ export class ResetNumberPage {
       message: message,
       buttons: ['OK']
     });
-
     await alert.present();
   }
 
@@ -47,12 +46,21 @@ export class ResetNumberPage {
       return;
     }
 
-    // Simulando sucesso (MVP)
-    console.log('Email:', this.email);
-    console.log('Novo Número:', this.newNumber);
+    const usuariosString = localStorage.getItem('usuarios');
+    if (usuariosString) {
+      const usuarios = JSON.parse(usuariosString);
+      const usuarioIndex = usuarios.findIndex((u: any) => u.email === this.email);
 
-    await this.presentAlert('Sucesso', 'Seu número foi redefinido com sucesso.');
-
-    this.router.navigate(['/login'], { queryParams: { numberResetSuccess: true } });
+      if (usuarioIndex !== -1) {
+        usuarios[usuarioIndex].phone = this.newNumber.replace(/\s/g, ''); // Atualiza o número removendo espaços
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        await this.presentAlert('Sucesso', 'Seu número foi redefinido com sucesso.');
+        this.router.navigate(['/login']);
+      } else {
+        await this.presentAlert('Erro', 'Email não encontrado.');
+      }
+    } else {
+      await this.presentAlert('Erro', 'Nenhum usuário cadastrado encontrado.');
+    }
   }
 }

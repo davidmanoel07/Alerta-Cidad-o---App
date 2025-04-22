@@ -59,15 +59,19 @@ export const routes: Routes = [
     loadComponent: () => import('./ocorrencia-suporte-relatar/pagina/report-occurrence/report-occurrence.page').then(m => m.ReportOccurrencePage),
   },
 
-  {
-    path: 'lost-email',
-    loadComponent: () => import('./lost-email/lost-email.page').then( m => m.LostEmailPage)
-  },
   
   {
     path: 'tutorial',
     loadComponent: () => import('./tutorial/tutorial.page').then(m => m.TutorialPage)
+  },  {
+    path: 'get-address',
+    loadComponent: () => import('./get-address/get-address.page').then( m => m.GetAddressPage)
+  },
+  {
+    path: 'add-address',
+    loadComponent: () => import('./add-address/add-address.page').then( m => m.AddAddressPage)
   }
+
   
 
 ];

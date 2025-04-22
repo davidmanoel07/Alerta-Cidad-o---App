@@ -22,7 +22,7 @@ export class LoginPage {
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      telefone: ['', Validators.required],
+      telefone: ['', Validators.required], // Mantendo 'telefone' aqui
     });
   }
 
@@ -39,21 +39,18 @@ export class LoginPage {
     if (this.loginForm.valid) {
       const { email, telefone } = this.loginForm.value;
 
-      // Busca os usuários salvos (exemplo)
       const usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
-
-      // Verifica se existe algum com o mesmo email e telefone (exemplo)
       const usuarioEncontrado = usuarios.find((u: any) =>
-        u.email === email && u.phone === telefone
+        u.email === email && u.phone === telefone.replace(/\s/g, '') // Busca usando 'phone'
       );
 
       if (usuarioEncontrado) {
         console.log('✅ Login bem-sucedido:', usuarioEncontrado);
         localStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado));
-        this.router.navigate(['/occurrences']);
+        this.router.navigate(['/get-address']);
       } else {
         console.log('❌ Usuário não encontrado');
-        this.presentAlert('Erro', 'Usuário não encontrado. Verifique as informações!'); // Use o alerta do Ionic
+        this.presentAlert('Erro', 'Usuário não encontrado. Verifique as informações!');
       }
     } else {
       console.log('❌ Formulário inválido');
@@ -62,9 +59,5 @@ export class LoginPage {
 
   goToResetNumber() {
     this.router.navigate(['/reset-number']);
-  }
-
-  goToLostEmail() {
-    this.router.navigate(['/lost-email']);
   }
 }

@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="medium">
+    <ion-title>Solicitação de Endereço</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <div class="container-pedido">
+
+    <div class="mensagem-centralizada">
+      <p>Você gostaria de nos informar seu endereço? Assim, conseguiremos oferecer uma proteção ainda mais eficaz para você e sua residência.</p>
+
+      <br>
+
+      <p>Obs: Essa informação é opcional e pode ser adicionada mais tarde, se quiser.</p>
+    </div>
+
+    <div class="opcoes-endereco">
+      <ion-button expand="full" (click)="goToAddAddress()">Adicionar Endereço</ion-button>
+      <ion-button expand="full" fill="clear" (click)="goToOccurrences()">Não, obrigado</ion-button>
+      </div>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,34 @@
+ion-content {
+    --background: #22333B;
+    height: 100vh; /* Garante que a ion-content ocupa 100% da altura da tela */
+    display: flex;
+    justify-content: center; /* Centraliza os itens filhos horizontalmente */
+    align-items: center; /* Centraliza os itens filhos verticalmente */
+  }
+
+  ion-header{
+    text-align: center;
+  }
+  
+  .container-pedido {
+    background-color: #fff;
+    padding: 20px; /* Adiciona espaço interno ao redor do conteúdo */
+    border-radius: 10px; /* Opcional: para cantos arredondados */
+    max-width: 400px; /* Define uma largura máxima para telas maiores */
+    width: 90%; /* Garante que o container não seja muito largo em telas menores */
+    height:350px;
+    margin-top: 40%;
+    margin-left: 5%;
+  }
+  
+  .mensagem-centralizada {
+    color: #000; /* Define a cor do texto para preto */
+    text-align: center; /* Centraliza o texto dentro da div */
+    margin-bottom: 20px; /* Adiciona espaço abaixo da mensagem */
+  }
+  
+  .opcoes-endereco {
+    display: flex; /* Usa flexbox para organizar os botões */
+    flex-direction: column; /* Organiza os botões em coluna, um abaixo do outro */
+    gap: 10px; /* Adiciona um espaço de 10 pixels entre os botões */
+  }

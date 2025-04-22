@@ -3,9 +3,10 @@
   padding: 0px;
 }
 
-ion-content{
+ion-content {
   --background: #22333B;
 }
+
 // ELEMENTOS DO HEADER
 
 .titles-all {
@@ -45,27 +46,49 @@ ion-list, ion-card {
   background-color: #22333B;
 }
 
-
 // ELEMENTOS DO FOOTER
 
-#button-user{
+#button-user {
   text-transform: lowercase;
   border: none;
   border-width: 0;
 }
 
-#emergency{
+#emergency {
   margin-top: 20%;
   margin-left: 20%;
   height: 70px;
   --border-radius: 18px;
   font-weight: bold;
-  
 }
 
-.status{
+.status {
   height: 50px;
   width: 50px;
 }
 
+/* Modal */
 
+.custom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.5); /* Fundo vermelho temporário */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Garante que o modal fique acima de outros elementos */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 16px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  border: 2px solid blue; /* Borda azul temporária */
+}
