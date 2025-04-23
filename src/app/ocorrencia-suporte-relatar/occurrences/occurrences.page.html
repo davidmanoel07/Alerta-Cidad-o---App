@@ -1,61 +1,78 @@
-<ion-header>
-    <ion-toolbar color="dark">
-      <ion-title class="titles-all" id="title-head">Ocorrências</ion-title>
-    </ion-toolbar>
+<ion-menu side="start" menuId="main-menu" contentId="main-content">
+  <ion-header>
+      <ion-toolbar color="dark">
+          <ion-title class="titles-all">Menu</ion-title>
+      </ion-toolbar>
   </ion-header>
-  
-  <ion-content>
 
-    
-    <!-- Funcionalidades do app -->
-    <ion-card>
-      <ion-card-header>
-        <img src="/assets/icon/Logo do App.png" alt="Logo do Aplicativo" class="logo-image">
-        <ion-card-subtitle class="titles-all" id="subtitle-card">Em que situação você se encontra?</ion-card-subtitle>
-      </ion-card-header>
-  
-      <ion-card-content>
-        <ion-list>
-          <ion-item color="Tertiary" class="item-options">
-            <ion-thumbnail slot="start">
-              <img alt="Foto ícone de status da ocorrência" src="/assets/icon/status.png" class="status" />
-            </ion-thumbnail>
-            <ion-label class="item-desc">Quero ver o status das minhas ocorrências</ion-label>
+  <ion-content>
+      <ion-list>
+          <ion-item button (click)="goToFeedback()">
+              <ion-icon slot="start" name="document-text-outline"></ion-icon>
+              <ion-label color="dark">Dê o seu feedback!</ion-label>
           </ion-item>
-  
-          <ion-item color="Tertiary" class="item-options" (click)="goToReport()">
-            <ion-thumbnail slot="start">
-              <img alt="Foto ícone de relato a ocorrência" src="/assets/icon/relatar-ocorrencia.png" />
-            </ion-thumbnail>
-            <ion-label class="item-desc">Quero relatar uma ocorrência</ion-label>
-          </ion-item>
-  
-          <ion-item color="Tertiary" class="item-options">
-            <ion-thumbnail slot="start">
-              <img alt="Foto ícone de perigo" src="/assets/icon/perigo-areas.png" />
-            </ion-thumbnail>
-            <ion-label class="item-desc">Quero saber as áreas de perigo</ion-label>
-          </ion-item>
-  
-          <ion-item color="Tertiary" class="item-options" (click)="goToChat()">
-            <ion-thumbnail slot="start">
-              <img alt="Foto ícone de um policial" src="/assets/icon/comunicacao-policia.png" id="police-chat" />
-            </ion-thumbnail>
-            <ion-label class="item-desc">Comunicação via chat com a polícia</ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-card-content>
-    </ion-card>
-  
-    <!-- Botão de Emergência -->
-    <ion-button color="danger" id="emergency">Botão de emergência</ion-button>
-  
+      </ion-list>
   </ion-content>
-  
-  <ion-footer>
-    <ion-toolbar color="dark">
+</ion-menu>
+
+<ion-header>
+  <ion-toolbar color="dark">
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="titles-all" id="title-head">Ocorrências</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="main-content">
+  <ion-card>
+      <ion-card-header>
+          <img src="/assets/icon/Logo do App.png" alt="Logo do Aplicativo" class="logo-image">
+          <ion-card-subtitle class="titles-all" id="subtitle-card">Em que situação você se encontra?</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+          <ion-list>
+              <ion-item color="Tertiary" class="item-options" (click)="goToStatus()">
+                  <ion-thumbnail slot="start">
+                      <img alt="Foto ícone de status da ocorrência" src="/assets/icon/status.png" class="status" />
+                  </ion-thumbnail>
+                  <ion-label class="item-desc"> Quero ver o status das minhas ocorrências</ion-label>
+              </ion-item>
+
+              <ion-item color="Tertiary" class="item-options" (click)="goToReport()">
+                  <ion-thumbnail slot="start">
+                      <img alt="Foto ícone de relato a ocorrência" src="/assets/icon/relatar-ocorrencia.png" />
+                  </ion-thumbnail>
+                  <ion-label class="item-desc">Quero relatar uma ocorrência</ion-label>
+              </ion-item>
+
+              <ion-item color="Tertiary" class="item-options" (click)="goToRisk()">
+                  <ion-thumbnail slot="start">
+                      <img alt="Foto ícone de perigo" src="/assets/icon/perigo-areas.png" />
+                  </ion-thumbnail>
+                  <ion-label class="item-desc">Quero saber as áreas de perigo</ion-label>
+              </ion-item>
+
+              <ion-item color="Tertiary" class="item-options" (click)="goToChat()">
+                  <ion-thumbnail slot="start">
+                      <img alt="Foto ícone de um policial" src="/assets/icon/comunicacao-policia.png" id="police-chat" />
+                  </ion-thumbnail>
+                  <ion-label class="item-desc">Comunicação via chat com a polícia</ion-label>
+              </ion-item>
+          </ion-list>
+      </ion-card-content>
+  </ion-card>
+
+  <ion-button color="danger" id="emergency" (click)="goToAddress()">Botão de emergência</ion-button>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="dark">
       <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
-        <ion-button (click)="goToSuport()" target="_blank" id="button-user" color="primary">Suporte ao usuário.</ion-button>
+          <ion-button (click)="goToSuport()" target="_blank" id="button-user" color="primary">Suporte ao usuário.</ion-button>
       </div>
-    </ion-toolbar>
-  </ion-footer>
+  </ion-toolbar>
+</ion-footer>

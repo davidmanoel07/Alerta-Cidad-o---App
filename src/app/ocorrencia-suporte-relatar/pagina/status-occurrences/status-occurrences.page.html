@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>Status das ocorrências</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container-status">
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle class="titles-all" id="subtitle-card">Suas ocorrências aparecerão aqui abaixo</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list>
+          <ion-item color="Tertiary" class="item-options" style="background-color: #ADD8E6;">
+            <ion-label class="item-desc" style="color: black;">Tipo: Furto /   Status: Em Andamento</ion-label>
+          </ion-item>
+          <ion-item color="Tertiary" class="item-options" style="background-color: #778899;">
+            <ion-label class="item-desc" style="color: black">Tipo: Furto /   Status: Em Andamento</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="dark">
+    <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+      <ion-button class="voltar" style="text-transform: lowercase;" (click)="goToOccurrences()" color="secondary">voltar</ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

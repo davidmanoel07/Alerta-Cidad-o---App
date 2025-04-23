@@ -63,15 +63,28 @@ export const routes: Routes = [
   {
     path: 'tutorial',
     loadComponent: () => import('./tutorial/tutorial.page').then(m => m.TutorialPage)
-  },  {
+  },
+  {
     path: 'get-address',
     loadComponent: () => import('./get-address/get-address.page').then( m => m.GetAddressPage)
   },
   {
     path: 'add-address',
     loadComponent: () => import('./add-address/add-address.page').then( m => m.AddAddressPage)
-  }
+  },
 
+  {
+    path: 'feedback',
+    loadComponent: () => import('./ocorrencia-suporte-relatar/pagina/feedback/feedback.page').then( m => m.FeedbackPage)
+  },
+  {
+    path: 'status-occorrences',
+    loadComponent: () => import('./ocorrencia-suporte-relatar/pagina/status-occurrences/status-occurrences.page').then( m => m.StatusOccurrencesPage)
+  },
+  {
+    path: 'risk-area',
+    loadComponent: () => import('./ocorrencia-suporte-relatar/pagina/risk-area/risk-area.page').then( m => m.RiskAreaPage)
+  },
   
 
 ];

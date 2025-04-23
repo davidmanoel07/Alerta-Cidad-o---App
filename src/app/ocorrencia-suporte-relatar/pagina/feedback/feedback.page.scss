@@ -1,0 +1,69 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+ion-title {
+    text-align: center;
+}
+
+ion-label {
+
+    width: 240px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+ion-item {
+    width: 250px;
+}
+
+ion-select{
+    color: #000;
+}
+
+ion-input {
+    background-color: #F0FFFF; /* Cor de fundo clara */
+    width: 100%;
+    text-indent: 10px;
+    color: #000; /* Cor do texto digitado */
+    --padding-start: 10px;
+    --padding-end: 10px;
+    border: 1px solid #d3d3d3; /* Adicionar uma borda sutil */
+    border-radius: 4px; /* Adicionar um pequeno arredondamento nas bordas */
+    height: 40px; /* Definir uma altura fixa para parecer com o select */
+    margin-bottom: 10px; /* Adicionar um pouco de espaço abaixo */
+  }
+  
+  ion-input::placeholder {
+    color: #a9a9a9; /* Cor do placeholder */
+  }
+  
+  ion-input:focus {
+    outline: none; /* Remover a borda de foco padrão do navegador */
+    border-color: #6dd5ed; /* Adicionar uma cor de borda de foco */
+    box-shadow: 0 0 5px rgba(109, 213, 237, 0.5); /* Adicionar um efeito de sombra suave ao focar */
+  }
+
+#button-feedback {
+    margin-top: 50px;
+}
+
+.voltar {
+    width: 150px;
+}
+
+ion-content {
+    --background: #22333B;
+}
+
+#container-feedback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+    margin: auto;
+}

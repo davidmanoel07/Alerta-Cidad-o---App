@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonFooter, IonCard,
-    IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonItem, IonLabel, IonList,IonThumbnail, IonCol, IonGrid, IonRow, IonButton, IonButtons} from '@ionic/angular/standalone';
+    IonCardContent, IonCardHeader, IonCardSubtitle, IonItem, IonLabel, IonList,IonThumbnail, IonCol, IonGrid, IonRow, IonButton, IonButtons,  IonMenu, IonMenuButton, IonIcon} from '@ionic/angular/standalone';
 
 @Component({
     standalone: true,
@@ -9,7 +9,7 @@ import { IonHeader, IonToolbar, IonTitle, IonContent, IonFooter, IonCard,
     templateUrl: 'occurrences.page.html',
     styleUrls: ['occurrences.page.scss'],
     imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonFooter, IonCard,
-        IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonItem, IonLabel, IonList,IonThumbnail, IonCol, IonGrid, IonRow, IonButton, IonButtons], // <-- adiciona IonFooter aqui
+        IonCardContent, IonCardHeader, IonCardSubtitle, IonItem, IonLabel, IonList,IonThumbnail, IonCol, IonGrid, IonRow, IonButton, IonButtons,  IonMenu, IonMenuButton, IonIcon], // <-- adiciona IonFooter aqui
 })
 export class OccurrencesPage {
     constructor(private router: Router) {}
@@ -22,8 +22,23 @@ export class OccurrencesPage {
         this.router.navigate(['/report-occurrence']);
     }
 
-    goToChat() { // Método renomeado
+    goToChat() {
         this.router.navigate(['/chat']);
     }
 
+    goToRisk() {
+        this.router.navigate(['/risk-area']);
+    }
+
+    goToFeedback() {
+        this.router.navigate(['/feedback']);
+    }
+
+    goToStatus() {
+        this.router.navigate(['/status-occorrences']);
+    }
+
+    goToAddress() {
+        this.router.navigate(['/add-address']); // Certifique-se de que '/add-address' é a rota correta
+      }
 }

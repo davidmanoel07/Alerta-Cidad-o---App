@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="dark">
+      <ion-title>Áreas de risco</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
+    <div id="container-map">
+      <ion-label id="map-label">As áreas de risco próximas a você aparecerão aqui abaixo</ion-label>
+      <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1x2PkIovJG62XGv8eEkLNM3dsEe8VaQg&ehbc=2E312F&noprof=1" width="350" height="500"></iframe>
+    </div>
+  </ion-content>
+  
+  <ion-footer>
+    <ion-toolbar color="dark">
+      <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+        <ion-button class="voltar" style="text-transform: lowercase;" (click)="goToOccurrences()" color="secondary">voltar</ion-button>
+      </div>
+    </ion-toolbar>
+  </ion-footer>

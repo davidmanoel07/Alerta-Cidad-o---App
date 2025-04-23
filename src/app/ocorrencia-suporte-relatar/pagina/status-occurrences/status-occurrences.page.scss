@@ -1,0 +1,70 @@
+ion-title {
+    text-align: center;
+  }
+  
+  ion-content {
+    --background: #22333B;
+    --padding-top: 20px; /* Adiciona um espaço no topo do conteúdo */
+    display: flex; /* Adiciona flex para controlar o alinhamento dos filhos */
+    flex-direction: column; /* Organiza os filhos em coluna */
+    align-items: center; /* Centraliza os filhos horizontalmente */
+  }
+  
+  #container-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    height: auto; /* Ajusta a altura ao conteúdo */
+    width: 90%; /* Limita a largura do container */
+  }
+  
+
+  
+  ion-card {
+    width: 100%;
+    margin-left: 50px; /* Ocupa a largura total do container */
+    margin-top: 20%; /* Empurra o card para a parte inferior */
+    margin-bottom: 60px; /* Aumenta o espaço abaixo do card */
+  }
+  
+  ion-card-header {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  
+  #subtitle-card {
+    padding-top: 8px;
+    text-align: center;
+  }
+  
+  ion-card-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  ion-list {
+    display: block;
+  }
+  
+  .item-options {
+    margin-bottom: 8px;
+  }
+  
+  .item-desc {
+    text-align: left;
+    color: var(--ion-color-dark-contrast);
+  }
+  
+  .voltar {
+    width: 150px;
+  }
+  
+  /* Remova o estilo antigo da logo */
+  .logo-image {
+    display: none;
+  }

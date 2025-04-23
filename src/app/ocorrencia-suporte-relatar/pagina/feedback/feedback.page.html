@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="dark">
+      <ion-title>Avaliação</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
+    <div id="container-feedback">
+      <ion-label>Em que tipo de ocorrencia gostaria de nos avaliar?</ion-label>
+      <ion-item>
+        <ion-select [(ngModel)]="ocorrenciaSelecionada" placeholder="Selecione">
+          <ion-select-option value="Roubo">Roubo</ion-select-option>
+          <ion-select-option value="Furto">Furto</ion-select-option>
+          <ion-select-option value="Acidente">Acidente</ion-select-option>
+          <ion-select-option value="Vandalismo">Vandalismo</ion-select-option>
+          <ion-select-option value="Agressao">Agressão</ion-select-option>
+          <ion-select-option value="Atentado ao Pudor">Atentado ao pudor</ion-select-option>
+          <ion-select-option value="outro">Outra</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-label>De um a cinco, qual nota você dá?</ion-label>
+      <ion-item>
+        <ion-label color="dark">Nota: </ion-label>
+        <ion-input
+          type="number"
+          min="1"
+          max="5"
+          step="1"
+          name="avaliacao"
+          id="notaInput"
+          [(ngModel)]="nota"
+        ></ion-input>
+      </ion-item>
+      <ion-button id="button-feedback" expand="block" color="primary" (click)="enviarFeedback()">
+        Enviar Avaliação
+      </ion-button>
+    </div>
+  </ion-content>
+  
+  <ion-footer>
+    <ion-toolbar color="dark">
+      <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+        <ion-button class="voltar" style="text-transform: lowercase;" (click)="goToOccurrences()" color="secondary">voltar</ion-button>
+      </div>
+    </ion-toolbar>
+  </ion-footer>
+  
